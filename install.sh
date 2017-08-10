@@ -1,1 +1,1 @@
-ln -s .tmux.conf ~/.tmux.conf
+ln -s ~/.myconfig/.tmux.conf ~/.tmux.conf

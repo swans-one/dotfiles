@@ -1,1 +1,10 @@
-ln -s ~/.myconfig/.tmux.conf ~/.tmux.conf
+##
+## Symlinks
+##
+ln -sfn ~/.myconfig/.tmux.conf ~/.tmux.conf
+
+
+##
+## Bash Install
+##
+./bash/install.sh

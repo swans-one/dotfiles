@@ -7,7 +7,10 @@ To install the dotfiles ensure the repo is located at `~/.myconfig/`
 and the run:
 
 ```
-./install.sh
+$ ./install.sh
 ```
 
-from within this directory.
+from within this directory. Running `install.sh` is set up to be
+idempotent. Running it multiple times should have no effect. Running
+it after the repository has been updated should update the dotfiles
+without breaking things.

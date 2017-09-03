@@ -2,6 +2,7 @@
 ## Symlinks
 ##
 ln -sfn ~/.myconfig/.tmux.conf ~/.tmux.conf
+ln -sfn ~/.myconfig/.ghci ~/.ghci
 
 
 ##

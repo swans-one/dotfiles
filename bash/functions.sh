@@ -1,7 +1,7 @@
 function v {
-    source "~/.env/$(basename $(pwd))/bin/activate"
+    source "$HOME/.env/$(basename $(pwd))/bin/activate"
 }
 
 function mkv {
-    pyvenv "~/.env/$(basename $(pwd))"
+    pyvenv "$HOME/.env/$(basename $(pwd))"
 }

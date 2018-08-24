@@ -36,10 +36,3 @@ if command -v xdg-open >/dev/null 2>&1; then
 else
     echo "[WARN] xdg-open -- not installed"
 fi
-
-# Pandoc aliases
-if command -v pandoc >/dev/null 2>&1; then
-    alias orgpdf='pandoc -f org -o output.pdf'
-else
-    echo "[WARN] pandoc -- not installed"
-fi

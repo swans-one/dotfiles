@@ -3,7 +3,7 @@ function v {
 }
 
 function mkv {
-    pyvenv "$HOME/.env/$(basename $(pwd))"
+    python3 -m venv "$HOME/.env/$(basename $(pwd))"
 }
 
 function org2pdf {

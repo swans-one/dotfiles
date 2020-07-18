@@ -42,3 +42,14 @@ if [ $NVM_DIR ]; then
 else
     echo "[WARN] nvm -- not installed"
 fi
+
+
+##
+## Setup direnv (https://direnv.net/)
+##
+if command -v direnv  &> /dev/null
+then
+    eval "$(direnv hook bash)"
+else
+    echo "[WARN] direnv -- not installed"
+fi

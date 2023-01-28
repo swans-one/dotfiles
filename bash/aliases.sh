@@ -16,3 +16,9 @@ if command -v xdg-open >/dev/null 2>&1; then
 else
     echo "[WARN] xdg-open -- not installed"
 fi
+
+# Tar aliases
+alias intar='tar -cfv'
+alias untar='tar -xfv'
+alias intargz='tar -czfv'
+alias untargz='tar -xzfv'

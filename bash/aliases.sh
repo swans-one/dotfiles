@@ -18,7 +18,7 @@ else
 fi
 
 # Tar aliases
-alias intar='tar -cfv'
-alias untar='tar -xfv'
-alias intargz='tar -czfv'
-alias untargz='tar -xzfv'
+alias intar='tar -cvf'
+alias untar='tar -xvf'
+alias intargz='tar -czvf'
+alias untargz='tar -xzvf'

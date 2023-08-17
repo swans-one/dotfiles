@@ -94,3 +94,8 @@ if [ $NVM_DIR ]; then
 else
     echo "[WARN] nvm -- not installed"
 fi
+
+##
+## PATH
+##
+PATH=~/.local/bin:$PATH

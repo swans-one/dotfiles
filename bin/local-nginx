@@ -1,0 +1,41 @@
+#!/bin/bash
+
+set -e
+
+if [ "$1" = "help" ]
+then
+    echo "Usage: local-nginx <path to nginx conf> [<start|stop|reload>]"
+    echo ""
+    echo "Run nginx conf file with the prefix equal to the current working directory"
+    exit 0
+fi
+
+if [ ! -f $1 ] || [ "$1" == "" ]
+then
+    echo "First argument must be a config file. Got '$1'"
+    exit 1
+fi
+
+args=()
+
+# Config file is the first parameter
+args+=("-c" "$(realpath $1)")
+
+# Set the prefix for all relative file paths to the
+# current directory
+args+=("-p" "$(pwd)")
+
+# Set up global parameters to make the error log and pid file local.
+args+=("-g" "pid nginx.pid; error_log logs/nginx-error.log warn;")
+
+
+if [ "$2" = "start" ]; then :
+elif [ "$2" = "" ]; then :
+elif [ "$2" = "stop" ]; then args+=("-s" "stop")
+elif [ "$2" = "reload" ]; then args+=("-s" "reload")
+else
+    echo "second arg must be one of start, stop, reload"
+    exit 1
+fi
+
+nginx "${args[@]}"

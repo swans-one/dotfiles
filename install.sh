@@ -9,3 +9,9 @@ ln -sfn ~/.myconfig/.ghci ~/.ghci
 ## Bash Install
 ##
 ./bash/install.sh
+
+##
+## Local Binaries
+##
+mkdir -p ~/.local/bin
+ln -sfn ~/.myconfig/bin/local-nginx

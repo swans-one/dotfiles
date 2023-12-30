@@ -14,4 +14,4 @@ ln -sfn ~/.myconfig/.ghci ~/.ghci
 ## Local Binaries
 ##
 mkdir -p ~/.local/bin
-ln -sfn ~/.myconfig/bin/local-nginx
+ln -sfn ~/.myconfig/bin/local-nginx ~/.local/bin/local-nginx

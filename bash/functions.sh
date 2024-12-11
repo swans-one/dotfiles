@@ -13,3 +13,7 @@ function org2pdf {
         echo "[ERR] pandoc not installed"
     fi
 }
+
+function fixaudio {
+    systemctl --user restart pulseaudio
+}
